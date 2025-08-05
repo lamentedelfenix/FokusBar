@@ -28,7 +28,8 @@
             justify-content: center;
             align-items: center;
             padding: 40px 40px 20px;
-            background-color: #f8f4ec; /* Reverted to original light background */
+            /* Darkened header background for contrast */
+            background-color: #e8ded1; 
             text-align: center;
             transition: background-color 0.3s;
         }
@@ -37,7 +38,21 @@
             font-family: 'Georgia', 'Times New Roman', serif;
             font-size: 58px;
             font-weight: 700;
-            color: #2d2d2d; /* Reverted to solid dark color */
+            /* Animated Gradient Effect for LIGHT text */
+            background: linear-gradient(90deg, #f0f0f0, #ffffff, #f0f0f0);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 8s linear infinite;
+        }
+        
+        /* Keyframes for the title animation */
+        @keyframes shine {
+            to {
+                background-position: -200% center;
+            }
         }
 
         .hero {
